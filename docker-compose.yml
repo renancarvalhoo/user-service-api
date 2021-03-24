@@ -2,15 +2,17 @@ version: '3'
 services:
   db:
     image: postgres
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: "trust"
     restart: always
     volumes:
       - './tmp/db:/var/lib/postgresql/data'
   web:
     build: .
+
     volumes:
       - .:/app
     ports:
       - "3005:3005"
     depends_on:
       - db
-
