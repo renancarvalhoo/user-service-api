@@ -121,7 +121,7 @@ curl -H "Content-Type: application/json" -X POST https://account-key-service.her
 
 #### User Service Routing
 - [ ] Verify that the GET /api/users endpoint routes to the appropriate method.
-- [ ] Verify that the POST /api/users endpoint routes to the appropriate method.
+- [ ] Vxerify that the POST /api/users endpoint routes to the appropriate method.
 
 #### User Controller
 - [ ] Verify that a request without a query parameter returns all users in the

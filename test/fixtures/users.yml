@@ -1,19 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  email: MyText
-  phone_number: MyText
-  full_name: MyText
-  password: MyText
-  key: MyText
-  account_key: MyText
-  metadata: MyText
+robin_williams:
+  email: robinwilliams@email.com
+  phone_number: 12997070808
+  full_name: Robin Williams
+  key: '<%= SecureRandom.base64 %>'
+  account_key: NULL
+  metadata: robin williams actor
 
-two:
-  email: MyText
-  phone_number: MyText
-  full_name: MyText
-  password: MyText
-  key: MyText
-  account_key: MyText
-  metadata: MyText
+jim_carrey:
+  email: jimcarrey@email.com
+  phone_number: 12997070801
+  full_name: Jim Carrey
+  key: '<%= SecureRandom.base64 %>'
+  account_key: NULL
+  metadata: jim carrey
