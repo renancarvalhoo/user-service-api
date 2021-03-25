@@ -31,22 +31,22 @@ below:
 - [ ] Return all current user records, most recently created first.
 - [ ] Optional `query` parameters to filter results matching `email`, `full_name`,
     and `metadata`. Return in most recently created first order.
-- [ ] 200 OK Response for all success cases
+- [X] 200 OK Response for all success cases
 - [ ] 422 Unprocessable Entity for malformed query parameters.
-- [ ] 5xx for server errors
+- [X] 5xx for server errors
 
 ### POST /api/users
 
-- [ ] Create a new user record in the database.
-- [ ] On success, return JSON object of user that was just created
-- [ ] On success, return status code 201 Created
-- [ ] On failure, return status code 422 Unprocessable Entity with a list of all
+- [X] Create a new user record in the database.
+- [X] On success, return JSON object of user that was just created
+- [X] On success, return status code 201 Created
+- [X] On failure, return status code 422 Unprocessable Entity with a list of all
     the errors.
-- [ ] 5xx for server errors.
-- [ ] Endpoint can only accept `email`, `phone_number`, `full_name`, `password`,
+- [X] 5xx for server errors.
+- [X] Endpoint can only accept `email`, `phone_number`, `full_name`, `password`,
     and `metadata` fields.
-- [ ] `key` field should be generated server side when user is created
-- [ ] `password` should be stored hashed with a salt value.
+- [X] `key` field should be generated server side when user is created
+- [X] `password` should be stored hashed with a salt value.
 - [ ] `account_key` field should be generated from account key service.
 
 ### JSON Specifications
