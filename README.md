@@ -139,7 +139,7 @@ curl -H "Content-Type: application/json" -X POST https://account-key-service.her
     the server side.
 - [X] Verify that a new user that is created has it's password stored in a hashed
     manner, with a salt value.
-- [ ] Verify that a new user that is created has an access_key created for it by
+- [X] Verify that a new user that is created has an access_key created for it by
     accessing the Account Key service.
 
 
