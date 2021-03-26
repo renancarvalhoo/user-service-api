@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://account-key-service.herokuapp.com/v1/account
+    body:
+      encoding: UTF-8
+      string: '{"email":"jimcarrey@email.com","key":"32u4hf23io4ufh1oi4fuh13i4"}'
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '80'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.3.4/2017-03-30)
+      Date:
+      - Fri, 26 Mar 2021 00:11:00 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"email":"jimcarrey@email.com","account_key":"e15991f46b221301e520f8c5e4dae18d"}'
+  recorded_at: Fri, 26 Mar 2021 00:11:00 GMT
+recorded_with: VCR 6.0.0

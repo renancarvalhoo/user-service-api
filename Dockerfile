@@ -16,7 +16,6 @@ RUN mkdir /app
 COPY Gemfile Gemfile.lock /app/
 WORKDIR /app
 RUN bundle install
-
 # Copy over the rest of the app's files
 COPY . /app
 

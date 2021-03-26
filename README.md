@@ -28,11 +28,11 @@ below:
 
 ### GET /api/users
 
-- [ ] Return all current user records, most recently created first.
-- [ ] Optional `query` parameters to filter results matching `email`, `full_name`,
+- [X] Return all current user records, most recently created first.
+- [X] Optional `query` parameters to filter results matching `email`, `full_name`,
     and `metadata`. Return in most recently created first order.
 - [X] 200 OK Response for all success cases
-- [ ] 422 Unprocessable Entity for malformed query parameters.
+- [X] 422 Unprocessable Entity for malformed query parameters.
 - [X] 5xx for server errors
 
 ### POST /api/users
@@ -47,11 +47,11 @@ below:
     and `metadata` fields.
 - [X] `key` field should be generated server side when user is created
 - [X] `password` should be stored hashed with a salt value.
-- [ ] `account_key` field should be generated from account key service.
+- [X] `account_key` field should be generated from account key service.
 
 ### JSON Specifications
 
-- [ ] On creation of a new user, the response object should be in the following
+- [X] On creation of a new user, the response object should be in the following
     format:
 ```
 {
@@ -63,7 +63,7 @@ below:
  metadata: "male, age 32, unemployed, college-educated"
 }
 ```
-- [ ] On returning found users, the response object should be in the following
+- [X] On returning found users, the response object should be in the following
     format:
 ```
 {
@@ -79,7 +79,7 @@ below:
  ]
 }
 ```
-- [ ] Errors should be returned as:
+- [X] Errors should be returned as:
 ```
 {
  errors: [
@@ -106,38 +106,38 @@ curl -H "Content-Type: application/json" -X POST https://account-key-service.her
 {"email":"user@example.com","account_key":"b97df97988a3832f009e2f18663ac932"}
 ```
 
-- [ ] Create Access Key service library
-- [ ] On user create, trigger Sidekiq job for access Account Key service
-- [ ] Perform retry on failure from Account Key service
-- [ ] Update user model with `account_key` value
+- [X] Create Access Key service library
+- [X] On user create, trigger Sidekiq job for access Account Key service
+- [X] Perform retry on failure from Account Key service
+- [X] Update user model with `account_key` value
 
 ### Testing
 #### User Model
-- [ ] Verify that all defined columns necessary exist.
-- [ ] Verify that columns have proper validation on the model.
-- [ ] Verify that it is possible to search for a user by `email`, `full_name`,
+- [X] Verify that all defined columns necessary exist.
+- [X] Verify that columns have proper validation on the model.
+- [X] Verify that it is possible to search for a user by `email`, `full_name`,
     and `metadata` using a single search functionality.
-- [ ] Coverage should be 100% for app/models/user.rb
+- [X] Coverage should be 100% for app/models/user.rb
 
 #### User Service Routing
-- [ ] Verify that the GET /api/users endpoint routes to the appropriate method.
-- [ ] Vxerify that the POST /api/users endpoint routes to the appropriate method.
+- [X] Verify that the GET /api/users endpoint routes to the appropriate method.
+- [X] Vxerify that the POST /api/users endpoint routes to the appropriate method.
 
 #### User Controller
-- [ ] Verify that a request without a query parameter returns all users in the
+- [X] Verify that a request without a query parameter returns all users in the
     database using the specified JSON format, ordered by most recently created
     first.
-- [ ] Verify that a request with a query parameter returns all users in the
+- [X] Verify that a request with a query parameter returns all users in the
     database filtered by the query paramater, using the specified JSON format,
     ordered by most recently created first.
-- [ ] Verify that creating a new user works with unique values specified, and
+- [X] Verify that creating a new user works with unique values specified, and
     returns a single User JSON object and a 201 Created status header.
-- [ ] Verify that creating a new user with non-unique values specified, returns
+- [X] Verify that creating a new user with non-unique values specified, returns
     a 422 Unprocessable Entity status, and an array of errors in the specified
     JSON format.
-- [ ] Verify that a new user that is created has a random key generated for it on
+- [X] Verify that a new user that is created has a random key generated for it on
     the server side.
-- [ ] Verify that a new user that is created has it's password stored in a hashed
+- [X] Verify that a new user that is created has it's password stored in a hashed
     manner, with a salt value.
 - [ ] Verify that a new user that is created has an access_key created for it by
     accessing the Account Key service.

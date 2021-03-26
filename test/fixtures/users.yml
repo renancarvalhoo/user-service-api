@@ -4,14 +4,30 @@ robin_williams:
   email: robinwilliams@email.com
   phone_number: 12997070808
   full_name: Robin Williams
-  key: '<%= SecureRandom.base64 %>'
-  account_key: NULL
+  key: ouh12o3iuhb12oi14h1iu4bh124u
+  account_key: 1i2u4yg1oi2g15oi1g
   metadata: robin williams actor
 
 jim_carrey:
   email: jimcarrey@email.com
   phone_number: 12997070801
   full_name: Jim Carrey
-  key: '<%= SecureRandom.base64 %>'
-  account_key: NULL
+  key: 32u4hf23io4ufh1oi4fuh13i4
+  account_key:
   metadata: jim carrey
+
+will_smith:
+  email: willsmith@email.com
+  phone_number: 12997070801
+  full_name: Will Smith
+  key: 32u4hf23io4ufh1oi4fuh13i4
+  account_key: 1i2u4yg1oi2g15oi1g12g12g
+  metadata: male 32 actor eua
+
+jared_leto:
+  email: jaredleto@email.com
+  phone_number: 12997070801
+  full_name: Jared Leto
+  key: 32u4hf23io4ufh1oi4fuh13i4
+  account_key: 1i2u4yg1oi2g15oi1g12g12g
+  metadata: male 30 singer actor awesome
