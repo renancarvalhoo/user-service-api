@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 2021_03_24_223017) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email"
-    t.index ["full_name"], name: "index_users_on_full_name"
-    t.index ["metadata"], name: "index_users_on_metadata"
+    t.index ["full_name"]
+    t.index ["metadata"]
   end
 
 end

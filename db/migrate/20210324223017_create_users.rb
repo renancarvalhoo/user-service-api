@@ -13,8 +13,8 @@ class CreateUsers < ActiveRecord::Migration[5.2]
     end
 
     add_index :users, :email, unique: true
-    add_index :users, :full_name, unique: true
-    add_index :users, :metadata, unique: true
+    add_index :users, :full_name
+    add_index :users, :metadata	
     add_index :users, :account_key, unique: true
   end
 
